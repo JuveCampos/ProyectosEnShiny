@@ -24,7 +24,9 @@ create_wordcloud(a$Texto, num_words = 100, stop_words = c("dijo"), mask = "APP.p
 
 # Funcion para crear el wordcloud
 create_wordcloud <- function(data, num_words = 100, background = "white", stop_words, mask = NULL) {
-  #, palabra = NULL 
+  # Pre-Función para eliminar simbolos raros
+  quitar_signos <- function(x)  stringr::str_remove_all(x, pattern = rebus::char_class("¿¡"))
+  
   # If text is provided, convert it to a dataframe of word frequencies
   # Si se provee el texto, convertirlo a un dataframe de frecuencia de palabras 
   if (is.character(data)) {
@@ -36,6 +38,8 @@ create_wordcloud <- function(data, num_words = 100, background = "white", stop_w
     corpus <- tm_map(corpus, removePunctuation)
     # Removemos los numeros
     corpus <- tm_map(corpus, removeNumbers)
+    # Removemos los signos de admiracion e interrogacion al reves
+    corpus <- tm_map(corpus, quitar_signos)    
     # Removemos las stopwords (palabras muy muy comunes que se usan para dar coherencia
     # a las oraciones. Para saber cuales, escribir: stopwords("spanish))
     corpus <- tm_map(corpus, removeWords, c(stopwords("spanish"), stop_words))
