@@ -12,7 +12,7 @@ a <- read.delim("principito.txt", encoding = "UTF-8", stringsAsFactors = T)
 names(a) <- "Texto"
 a$Texto <- as.character(a$Texto)
 
-# Fubcion para romper cadenas de texto
+# Funcion para romper cadenas de texto
 romper <- function(string, patron = ", "){
   string <- stringr::str_replace(string, pattern = " y ", replacement = patron)
   string <- strsplit(string, patron)
