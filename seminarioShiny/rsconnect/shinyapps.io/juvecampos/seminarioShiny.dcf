@@ -1,0 +1,12 @@
+name: seminarioShiny
+title: seminarioShiny
+username:
+account: juvecampos
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1531726
+bundleId: 2621184
+url: https://juvecampos.shinyapps.io/seminarioShiny/
+when: 1574836852.81743
+asMultiple: FALSE
+asStatic: FALSE
