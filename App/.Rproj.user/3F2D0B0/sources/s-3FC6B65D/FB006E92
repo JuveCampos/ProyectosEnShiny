@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1580496349397.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "FB006E92",
+    "lastKnownWriteTime" : 1580503219,
+    "last_content_update" : 1580503219085,
+    "path" : "~/GitHub/tutorialShiny/App/shinyWordCloudEspEng.R",
+    "project_path" : "shinyWordCloudEspEng.R",
+    "properties" : {
+        "cursorPosition" : "112,17",
+        "scrollLine" : "108"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
