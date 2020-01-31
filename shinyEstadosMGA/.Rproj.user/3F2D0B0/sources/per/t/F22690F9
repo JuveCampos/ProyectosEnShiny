@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1580490061922.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "590162623",
+    "id" : "F22690F9",
+    "lastKnownWriteTime" : 1580490079,
+    "last_content_update" : 1580490079246,
+    "path" : "~/GitHub/tutorialShiny/shinyEstadosMGA/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+        "cursorPosition" : "103,31",
+        "scrollLine" : "93"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

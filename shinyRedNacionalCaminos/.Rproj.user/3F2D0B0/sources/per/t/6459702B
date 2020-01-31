@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1580490259004.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2707826828",
+    "id" : "6459702B",
+    "lastKnownWriteTime" : 1580494373,
+    "last_content_update" : 1580494373713,
+    "path" : "~/GitHub/tutorialShiny/shinyRedNacionalCaminos/app.R",
+    "project_path" : "app.R",
+    "properties" : {
+        "cursorPosition" : "56,30",
+        "scrollLine" : "51"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
