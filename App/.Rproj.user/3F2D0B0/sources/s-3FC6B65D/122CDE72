@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1580497713059.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "122CDE72",
+    "lastKnownWriteTime" : 1580503304,
+    "last_content_update" : 1580503304492,
+    "path" : "~/GitHub/tutorialShiny/App/app.R",
+    "project_path" : "app.R",
+    "properties" : {
+        "cursorPosition" : "124,27",
+        "scrollLine" : "121",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

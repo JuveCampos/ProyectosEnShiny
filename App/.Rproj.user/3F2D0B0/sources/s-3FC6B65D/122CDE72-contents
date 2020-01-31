@@ -20,8 +20,6 @@ romper <- function(string, patron = ", "){
   return(string)
 }
 
-create_wordcloud(a$Texto, num_words = 100, stop_words = c("dijo"), mask = "APP.png")
-
 # Funcion para crear el wordcloud
 create_wordcloud <- function(data, num_words = 100, background = "white", stop_words, mask = NULL) {
   # Pre-Función para eliminar simbolos raros
@@ -77,51 +75,52 @@ ui <- fluidPage(
   # 2. Plantilla del panel lateral izquierdo
   sidebarLayout(
     # 2.1 Creacion del panel lateral izquierdo
-    sidebarPanel(width = 3,
-      # 2.1.1 Seleccionador de la fuente de los datos
-      radioButtons(
-        inputId = "source",
-        label = "Texto a analizar",
-        choices = c(
-          "El Principito" = "book",
-          "Escribe tu propio texto" = "own",
-          "Cargar un archivo externo" = "file"
-        )
-      ),
-      
-      # 2.1.1.1 Panel condicional; se crea si el usuario quiere escribir su propio texto.
-      conditionalPanel(
-        condition = "input.source == 'own'",
-        textAreaInput("text", "Introduzca texto", rows = 7)
-      ),
-      
-      # 2.1.1.2 Panel condicional; se crea si el usuario quiere subir un archivo.
-      conditionalPanel(
-        condition = "input.source == 'file'",
-        fileInput("file", "Seleccione un archivo (*.txt)")
-      ),
-      
-      # 2.1.2 Entrada numerica del maximo numero de palabras en la nube de texto.
-      numericInput("num", "Maximo numero de palabras en la WordCloud",
-                   value = 100, min = 5),
-      
-      # 2.1.3 Seleccion del color de fondo.
-      colourInput("col", "Color de Fondo", value = "white"),
-      
-      # Add a "draw" button to the app
-      # Agregar un boton de dibujo de la WordCloud
-      actionButton(inputId = "draw", label = "Graficar!")
+    sidebarPanel(width = 4,
+                 # 2.1.1 Seleccionador de la fuente de los datos
+                 radioButtons(
+                   inputId = "source",
+                   label = "Texto a analizar",
+                   choices = c(
+                     "El Principito" = "book",
+                     "Escribe tu propio texto" = "own",
+                     "Cargar un archivo externo" = "file"
+                   )
+                 ),
+                 
+                 # 2.1.1.1 Panel condicional; se crea si el usuario quiere escribir su propio texto.
+                 conditionalPanel(
+                   condition = "input.source == 'own'",
+                   textAreaInput("text", "Introduzca texto", rows = 7)
+                 ),
+                 
+                 # 2.1.1.2 Panel condicional; se crea si el usuario quiere subir un archivo.
+                 conditionalPanel(
+                   condition = "input.source == 'file'",
+                   fileInput("file", "Seleccione un archivo (*.txt)")
+                 ),
+                 
+                 # 2.1.2 Entrada numerica del maximo numero de palabras en la nube de texto.
+                 numericInput("num", "Maximo numero de palabras en la WordCloud",
+                              value = 100, min = 5),
+                 
+                 # 2.1.3 Seleccion del color de fondo.
+                 colourInput("col", "Color de Fondo", value = "white"),
+                 
+                 # Add a "draw" button to the app
+                 # Agregar un boton de dibujo de la WordCloud
+                 actionButton(inputId = "draw", label = "Graficar!")
     ),
     
     # 3. Panel Principal
-    mainPanel(width = 9,
-      # 3.1 Contenido del panel principal!
-      wordcloud2Output("cloud", height = "600px", width = "1200px")
+    mainPanel(width = 8,
+              # 3.1 Contenido del panel principal!
+              wordcloud2Output("cloud", height = "600px", width = "1200px")
     )
   ),
   br(),
   wellPanel(h4("Opciones Adicionales"), 
             textInput("newStopWords", "Introduzca palabras a eliminar (separadas por un espacio)")
+            # # OPCIONES ADICIONALES EN BETA
             # ,
             # radioButtons(
             #   inputId = "forma",
