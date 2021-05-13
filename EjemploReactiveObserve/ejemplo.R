@@ -93,6 +93,7 @@ server<-function(input,output,session){
     output$Observe_Out<-renderTable({df})
   })
   
+  # EJEMPLO CON EL -observeEvent-
   #We can change any input as much as we want, but the code wont run until the trigger
   # input$Go is pressed.
   observeEvent(input$Go, # Detonador. 
